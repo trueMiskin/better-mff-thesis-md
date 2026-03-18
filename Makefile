@@ -10,6 +10,7 @@ LATEX_TEMPLATE=$(addprefix $(BUILD_DIR)/, $(notdir $(wildcard latex_template/*.t
 all: $(addsuffix .tex, $(CHAPTERS)) $(LATEX_TEMPLATE) | $(BUILD_DIR)
 	rsync -av refs.bib $(BUILD_DIR)
 	rsync -av img $(BUILD_DIR)
+	rsync -av latex_template/latex_img $(BUILD_DIR)
 	rsync macros.tex $(BUILD_DIR)
 	
 	cd $(BUILD_DIR); \
