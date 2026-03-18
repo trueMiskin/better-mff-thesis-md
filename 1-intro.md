@@ -21,7 +21,12 @@ It is very advisable to skim through a book about scientific English writing bef
 ## Markdown basic citation syntax {-}
 
 - `@glasman2010science` -- author name → @glasman2010science
-- `[-@glasman2010science]` -- publication year → [-@glasman2010science]
+- `[-@glasman2010science]` -- publication year (in `authoryear-comp` style or it's same as syntax lower) → [-@glasman2010science]
 - `[@glasman2010science]` -- only bracket with numer → [@glasman2010science]
 
-Style rendering of citations can be changed in `citation.lua` filter. Additionally, you can use \LaTeX{} macros like `\citetitle` for printing book name.
+Other examples of syntax:
+
+- [see page 34 @glasman2010science; or 64 @lamport1994latex; or 65 @lamport1994latex]
+- [@glasman2010science, pp. iv, vi-xi, (xv)-(xvii) with suffix here]
+
+Additionally, you can use \LaTeX{} macros like `\citetitle` for printing book name.
