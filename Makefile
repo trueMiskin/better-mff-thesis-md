@@ -2,7 +2,7 @@ NAME=thesis
 ABSTRACT=abstract
 LATEXMKOPTS=-pdflua #you can also use -pdf for forcing pdflatex, if required
 LATEXMK=latexmk $(LATEXMKOPTS)
-PANDOCOPTS=--top-level-division=chapter --listings --lua-filter crossref-gen.lua --biblatex
+PANDOCOPTS=--top-level-division=chapter --listings --lua-filter crossref-gen.lua --lua-filter table-attr.lua --biblatex
 BUILD_DIR := ./build
 CHAPTERS=$(addprefix $(BUILD_DIR)/, $(basename $(wildcard *.md)))
 LATEX_TEMPLATE=$(addprefix $(BUILD_DIR)/, $(notdir $(wildcard latex_template/*.tex latex_template/*.xmpdata)))
